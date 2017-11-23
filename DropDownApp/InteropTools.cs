@@ -8,7 +8,7 @@ using System.Windows;
 using System.Windows.Input;
 using System.Windows.Interop;
 
-namespace CryptoManager
+namespace DropDownApp
 {
     public static class InteropTools
     {

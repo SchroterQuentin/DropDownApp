@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Media.Animation;
 
-namespace CryptoManager
+namespace DropDownApp
 {
     public static class ScreenInfos
     {

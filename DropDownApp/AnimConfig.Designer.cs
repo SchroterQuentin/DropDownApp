@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace CryptoManager {
+namespace DropDownApp {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]

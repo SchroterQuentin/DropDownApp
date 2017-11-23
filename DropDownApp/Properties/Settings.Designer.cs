@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace CryptoManager.Properties
+namespace DropDownApp.Properties
 {
 
 

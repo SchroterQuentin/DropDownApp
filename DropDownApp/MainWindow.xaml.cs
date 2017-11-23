@@ -14,7 +14,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace CryptoManager
+namespace DropDownApp
 {
     /// <summary>
     /// Logique d'interaction pour MainWindow.xaml
