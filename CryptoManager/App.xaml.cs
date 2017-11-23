@@ -13,5 +13,6 @@ namespace CryptoManager
     /// </summary>
     public partial class App : Application
     {
+        
     }
 }

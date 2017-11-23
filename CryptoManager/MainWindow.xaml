@@ -5,8 +5,38 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CryptoManager"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
-    <Grid>
+        AllowsTransparency="True"
+        WindowStyle="None"
+        x:Name="master"
+        Title="MainWindow" 
+        Background="DarkGray"
+        Left="0"
+        ShowInTaskbar="False"
+        Height="{Binding Source={x:Static local:AppInfos.Height}}" 
+        Width="{Binding Source={x:Static local:AppInfos.Width}}">
+    <Window.Resources>
+        <Storyboard x:Key="Show">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="master">
+                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="{Binding Source={x:Static local:AppInfos.DureeAnim}}" Value="{Binding Source={x:Static local:AppInfos.Opacity}}"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(Window.Top)" Storyboard.TargetName="master">
+                <EasingDoubleKeyFrame KeyTime="0" Value="{Binding Source={x:Static local:AppInfos.NegAppHeight}}"/>
+                <EasingDoubleKeyFrame KeyTime="{Binding Source={x:Static local:AppInfos.DureeAnim}}" Value="0"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="Hide">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="master">
+                <EasingDoubleKeyFrame KeyTime="0" Value="{Binding Source={x:Static local:AppInfos.Opacity}}"/>
+                <EasingDoubleKeyFrame KeyTime="{Binding Source={x:Static local:AppInfos.DureeAnim}}" Value="0"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(Window.Top)" Storyboard.TargetName="master">
+                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="{Binding Source={x:Static local:AppInfos.DureeAnim}}" Value="{Binding Source={x:Static local:AppInfos.NegAppHeight}}"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+    </Window.Resources>
+    <Grid x:Name="grid">
         
     </Grid>
 </Window>

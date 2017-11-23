@@ -1,0 +1,15 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="CryptoManager" GeneratedClassName="AnimConfig">
+  <Profiles />
+  <Settings>
+    <Setting Name="CoeffOccupation" Type="System.Double" Scope="Application">
+      <Value Profile="(Default)">0.65</Value>
+    </Setting>
+    <Setting Name="DureeAnim" Type="System.TimeSpan" Scope="Application">
+      <Value Profile="(Default)">00:00:00.3000000</Value>
+    </Setting>
+    <Setting Name="OpacityMax" Type="System.Double" Scope="Application">
+      <Value Profile="(Default)">0.6</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>
