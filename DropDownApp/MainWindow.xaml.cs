@@ -26,8 +26,12 @@ namespace DropDownApp
 
         DateTime lastAnim;
 
+        Key hotKey;
+
         public MainWindow()
         {
+            hotKey = AppInfos.GlobalHotKey;
+
             Loaded += MainWindow_Loaded;
             
             InitializeComponent();
@@ -41,13 +45,11 @@ namespace DropDownApp
 
         private void MainWindow_Deactivated(object sender, EventArgs e)
         {
-            Console.WriteLine("Deactivation");
             AnimHide();
         }
 
         private void MainWindow_Activated(object sender, EventArgs e)
         {
-            Console.WriteLine("Activation");
             AnimShow();
         }
 
@@ -73,7 +75,7 @@ namespace DropDownApp
         {
             InteropTools.EnableBlur(this);
             show.Begin();
-            InteropTools.SetGlobalHotKey(this, Key.F10);
+            InteropTools.SetGlobalHotKey(this, hotKey);
             
             Activated += MainWindow_Activated;
             Deactivated += MainWindow_Deactivated;
@@ -82,13 +84,11 @@ namespace DropDownApp
 
         private void MainWindow_KeyUp(object sender, KeyEventArgs e)
         {
-            Console.WriteLine("Key Pressed : " + e.Key.ToString() + " -> " + e.SystemKey.ToString());
-            Console.WriteLine(Top);
-            if (e.SystemKey == Key.F10 && Top == 0)
+            if (e.SystemKey == hotKey && Top == 0)
             {
                 AnimHide();
             }
-            else if (e.SystemKey == Key.F10 && Top < 0)
+            else if (e.SystemKey == hotKey && Top < 0)
             {
                 AnimShow();
             }

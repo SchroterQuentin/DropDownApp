@@ -13,11 +13,11 @@ namespace DropDownApp {
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "15.3.0.0")]
-    internal sealed partial class AnimConfig : global::System.Configuration.ApplicationSettingsBase {
+    internal sealed partial class AppSettings : global::System.Configuration.ApplicationSettingsBase {
         
-        private static AnimConfig defaultInstance = ((AnimConfig)(global::System.Configuration.ApplicationSettingsBase.Synchronized(new AnimConfig())));
+        private static AppSettings defaultInstance = ((AppSettings)(global::System.Configuration.ApplicationSettingsBase.Synchronized(new AppSettings())));
         
-        public static AnimConfig Default {
+        public static AppSettings Default {
             get {
                 return defaultInstance;
             }
@@ -47,6 +47,15 @@ namespace DropDownApp {
         public double OpacityMax {
             get {
                 return ((double)(this["OpacityMax"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("F10")]
+        public string HotKey {
+            get {
+                return ((string)(this["HotKey"]));
             }
         }
     }

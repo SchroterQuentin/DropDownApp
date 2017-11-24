@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Input;
 using System.Windows.Media.Animation;
 
 namespace DropDownApp
@@ -10,7 +11,22 @@ namespace DropDownApp
     public static class AppInfos
     {
 
-        private static double coeff = AnimConfig.Default.CoeffOccupation;
+        private static double coeff = AppSettings.Default.CoeffOccupation;
+
+        public static Key GlobalHotKey
+        {
+            get
+            {
+                try
+                {
+                    return (Key)Enum.Parse(typeof(Key), AppSettings.Default.HotKey, true);
+                }
+                catch
+                {
+                    return Key.F9;
+                }
+            }
+        }
 
 
         public static double Height
@@ -41,7 +57,7 @@ namespace DropDownApp
         {
             get
             {
-                return KeyTime.FromTimeSpan(AnimConfig.Default.DureeAnim);
+                return KeyTime.FromTimeSpan(AppSettings.Default.DureeAnim);
             }
         }
 
@@ -49,7 +65,7 @@ namespace DropDownApp
         {
             get
             {
-                return TimeSpan.FromMilliseconds(AnimConfig.Default.DureeAnim.TotalMilliseconds / 2.0);
+                return TimeSpan.FromMilliseconds(AppSettings.Default.DureeAnim.TotalMilliseconds / 2.0);
             }
         }
 
@@ -57,7 +73,7 @@ namespace DropDownApp
         {
             get
             {
-                return AnimConfig.Default.OpacityMax;
+                return AppSettings.Default.OpacityMax;
             }
         }
 

@@ -1,5 +1,5 @@
 ﻿<?xml version='1.0' encoding='utf-8'?>
-<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="DropDownApp" GeneratedClassName="AnimConfig">
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="DropDownApp" GeneratedClassName="AppSettings">
   <Profiles />
   <Settings>
     <Setting Name="CoeffOccupation" Type="System.Double" Scope="Application">
@@ -10,6 +10,9 @@
     </Setting>
     <Setting Name="OpacityMax" Type="System.Double" Scope="Application">
       <Value Profile="(Default)">0.6</Value>
+    </Setting>
+    <Setting Name="HotKey" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">F10</Value>
     </Setting>
   </Settings>
 </SettingsFile>
